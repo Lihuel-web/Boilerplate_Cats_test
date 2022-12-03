@@ -11,3 +11,7 @@ Learning good commit practices
 -That's all for now
 Escribo el texto sin las comillas ojo, no es git commit -m
 Luego enter para guardar el texto como un archivo en la carpeta .git oculta. De preferencia cambiar el nombre al archivo de texto creado.
+Usar mayúsculas sólo en la primera letra, no en todo el asunto o subject
+No usar puntos en el asunto o Subject para ahorrar caracteres, ya que se recomienda máximo 50 y en 72 GitHub te lo corta
+Se escribe en modo imperativo, por lo que vi es infinitivo: https://cbea.ms/git-commit/#separate 
+En el cuerpo del commit no es tan importante poner infinitivo o imperativo (de dar órdenes)
