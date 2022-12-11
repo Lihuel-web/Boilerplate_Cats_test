@@ -14,7 +14,9 @@
                 color: brown;
             }
             .text {
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Aquí intenta usar la primera el browser
+                pero si algún carácter no está soportado pasa a la siguiente y así hasta llegar a la última de la derecha que es una fuente
+                genérica y la más confiable de tener todos los caracteres*/
                 color: rgb(211, 241, 162);
             }
             .subsection {
@@ -24,13 +26,28 @@
             .subsection.title {
                 text-decoration-line: underline;
                 text-decoration-style: wavy;
-                font-size: large;
+                font-size: 25px;
+                font-weight: 700; /*grosor de la letra: between 1 & 1000, 700 is bold.
+                Ojo: las fuentes "usualmente" sólo aceptan incrementos de 100 en 100, no valores como 250*/
                 line-height: 150%;
                 display: table; /* keep the background color wrapped tight */
-                background-color:rgba(45, 45, 166, 0.367)
+                background-color:rgba(45, 45, 166, 0.367); /*El último valor de la derecha es alpha channel o transparencia*/
+                border: 0.5px solid currentColor; /*Aquí current color sirve para seguir usando el mismo color del elemento,
+                en este caso del texto*/
             }
             .subsection.paragraph {
                 font: 17px Georgia, serif;
+                line-height: 150%;
+            }
+            table {
+                border-collapse: collapse; /*para que no hayan bordes dobles en la tabla*/
+            }
+            table, td, th {
+                border: 0.1px solid white;
+                padding: 5px; /*para que respiren los valores adentro de la tabla y no estén tan pegados al borde*/
+            }
+            td {
+                text-align: center;
             }
         </style>
     </head>
@@ -41,17 +58,28 @@
         <div class="subsection paragraph">In this section we'll practice CSS styles and classes</div>
         <!--Aquí se verá la diferencia entre un estilo personalizado de texto con monospace y sin él
         para dibujar los gatitos-->
-        <div class="text">With monospace font-family CSS style</div>
-        <div class="gatitos">
-            &#160|\---/|<br>
-            &#160| o_o |<br>
-            &#160 \_^_/<br>
-        </div>
-        <div class="text">Ahora sin monospace font family (default)</div>
-        &#160|\---/|<br>
-        &#160| o_o |<br>
-        &#160 \_^_/<br>
-        
+        <table>
+            <tr> <!--Es un poco antinatural pero así se hace en html, primero se escribe el contenido de todas las columnas
+            para la primera fila-->
+                <th><div class="text">With monospace font-family CSS style</div></th>
+                <!-- aquí cada th es un header q se pone solo en negrita y centrado, cada header es por default una columna-->
+                <th><div class="text">Ahora sin monospace font family (default)</div></th>
+            </tr>
+            <tr><!--Luego van todos los datos de la segunda fila separados por <td> para cada columna 
+                td es table data o los datos para cada columna-->
+                <td>   <div class="gatitos">
+                    |\---/|<br>
+                    | o_o |<br>
+                    \_^_/<br>
+                    </div>
+                </td>
+                
+                <td> |\---/|<br>
+                | o_o |<br>
+                \_^_/<br>
+                </td>
+            </tr>
+        </table>
     </body>
 
 </html>
