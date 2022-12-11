@@ -18,10 +18,11 @@
                 color: brown;
             }
             .text {
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Aquí intenta usar la primera el browser
+                font-size: 15px;
+                font-family: 'Rock Salt', 'Arial Narrow', Arial, sans-serif; /*Aquí intenta usar la primera el browser (puse una externa)
                 pero si algún carácter no está soportado pasa a la siguiente y así hasta llegar a la última de la derecha que es una fuente
                 genérica y la más confiable de tener todos los caracteres*/
-                color: rgb(211, 241, 162);
+                color: rgb(157, 247, 12);
             }
             .subsection {
                 color:rgb(141, 184, 71)
@@ -53,6 +54,10 @@
             td {
                 text-align: center;
             }
+            img {
+                height: auto;
+                width: 110px;
+            }
         </style>
     </head>
     <body>
@@ -62,6 +67,7 @@
         <div class="subsection paragraph">In this section we'll practice CSS styles and classes</div>
         <!--Aquí se verá la diferencia entre un estilo personalizado de texto con monospace y sin él
         para dibujar los gatitos-->
+        <br>
         <table>
             <tr> <!--Es un poco antinatural pero así se hace en html, primero se escribe el contenido de todas las columnas
             para la primera fila-->
@@ -78,12 +84,18 @@
                     </div>
                 </td>
                 
-                <td> |\---/|<br>
-                | o_o |<br>
-                \_^_/<br>
+                <td>
+                    |\---/|<br>
+                    | o_o |<br>
+                    \_^_/<br>
                 </td>
             </tr>
+            <br>
+
         </table>
+        <div class="text">Y un gato real</div>
+        <img src="../images/una-gatita-negra-se-vuelve-completamente-blanca.jpg_1902800913.webp" alt="gatita negra que
+                     se volvió blanca">
     </body>
 
 </html>
